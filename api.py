@@ -11,6 +11,7 @@ from sklearn.linear_model import LinearRegression
 import joblib
 import json
 import jsonify
+from collections.abc import Mapping
 app = flask.Flask(__name__)
 model = joblib.load(r'Linear_model')
 
