@@ -10,7 +10,7 @@ from sklearn.linear_model import LinearRegression
 #import tensorflow as tf
 import joblib
 import json
-import jsonify
+#import jsonify
 app = flask.Flask(__name__)
 model = joblib.load(r'Linear_model')
 
