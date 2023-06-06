@@ -14,7 +14,7 @@ import jsonify
 app = flask.Flask(__name__)
 model = joblib.load(r'Linear_model')
 
-@app.route('/',methods=['POST'])
+@app.route('/predict',methods=['POST'])
 def predict():
 	features = flask.request.get_json(force=True)
 	data= pd.DataFrame([features])
