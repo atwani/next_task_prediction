@@ -1,1 +1,1 @@
-web: gunicorn api:predict
+web: gunicorn api:app
