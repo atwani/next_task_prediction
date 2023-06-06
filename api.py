@@ -31,4 +31,4 @@ def predict():
 
 
 if __name__=='__main__':
-	app.run(port= process.env.PORT, debug=True)
+	app.run(debug=True)
