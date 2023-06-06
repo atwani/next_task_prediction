@@ -12,7 +12,7 @@ import joblib
 import json
 import jsonify
 app = flask.Flask(__name__)
-model = joblib.load(r'C:/xampp/htdocs/moodle/mod/adaptlesson/Linear_model')
+model = joblib.load(r'Linear_model')
 
 @app.route('/predict',methods=['POST'])
 def predict():
