@@ -24,7 +24,7 @@ def predict():
 	prediction=model.predict(scaler_datax)
 	ts=np.array2string(prediction)
 	
-	print(ts)
+	return(ts)
 	#event=np.array(event)
 	#data={'Total1':[0],'File':[0],'File submissions':[0],'System':[0]}
 	
