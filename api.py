@@ -7,6 +7,8 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
 from sklearn.linear_model import LinearRegression
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.datasets import make_regression
 #import tensorflow as tf
 import joblib
 import json
