@@ -16,7 +16,7 @@ import json
 app = flask.Flask(__name__)
 model = joblib.load(r'model_linear2')
 
-@app.route('/')
+@app.route('/predict',methods=['POST','GET']')
 def predict():
 	features = flask.request.get_json(force=True)
 	data= pd.DataFrame([features])
