@@ -19,6 +19,7 @@ model = joblib.load(r'model_linear2.pkl')
 @app.route('/predict',methods=['POST'])
 def predict():
 	features = flask.request.get_json(force=True)
+	print(features)
 	data= pd.DataFrame([features])
 	data1 = data.to_numpy()
 	scaler=StandardScaler()
