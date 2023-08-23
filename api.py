@@ -14,7 +14,7 @@ import joblib
 import json
 #import jsonify
 app = flask.Flask(__name__)
-model = joblib.load(r'model_linear2')
+model = joblib.load(r'model_linear2.pkl')
 
 @app.route('/predict',methods=['POST'])
 def predict():
