@@ -19,7 +19,6 @@ model = joblib.load(r'model_linear2.pkl')
 @app.route('/predict',methods=['POST'])
 def predict():
 	features = flask.request.get_json(force=True)
-	print(features)
 	data= pd.DataFrame([features])
 	data1 = data.to_numpy()
 	scaler=StandardScaler()
@@ -27,7 +26,7 @@ def predict():
 	prediction=model.predict(scaler_datax)
 	ts=np.array2string(prediction)
 	
-	return(ts)
+	return(prediction)
 	#event=np.array(event)
 	#data={'Total1':[0],'File':[0],'File submissions':[0],'System':[0]}
 	
