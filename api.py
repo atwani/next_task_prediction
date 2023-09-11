@@ -12,10 +12,9 @@ from sklearn.datasets import make_regression
 #import tensorflow as tf
 import joblib
 import json
-
 #import jsonify
 app = flask.Flask(__name__)
-model = joblib.load(r'model_linear2')
+model = joblib.load(r'model_linear2.pkl')
 
 @app.route('/predict',methods=['POST'])
 def predict():
@@ -29,8 +28,9 @@ def predict():
 	
 	return(ts)
 	#event=np.array(event)
-	#data={'Total1':[0],'File':[0],'File submissions':[0],'System':[0]}	
+	#data={'Total1':[0],'File':[0],'File submissions':[0],'System':[0]}
+	
+
 
 if __name__=='__main__':
 	app.run(debug=True)
-	
