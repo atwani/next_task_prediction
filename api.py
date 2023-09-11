@@ -14,7 +14,7 @@ import joblib
 import json
 #import jsonify
 app = flask.Flask(__name__)
-model = joblib.load(r'model_linear2.pkl')
+model = joblib.load(r'model_linear2')
 
 @app.route('/predict',methods=['POST'])
 def predict():
@@ -22,8 +22,8 @@ def predict():
 	data= pd.DataFrame([features])
 	data1 = data.to_numpy()
 	scaler=StandardScaler()
-	scaler_datax=scaler.fit_transform(data1)
-	prediction=model.predict(data1)
+	scalerdatax=scaler.fit_transform(data1)
+	prediction=model.predict(scalerdatax)
 	ts=np.array2string(prediction)
 	
 	return(ts)
