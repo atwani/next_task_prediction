@@ -29,8 +29,7 @@ def predict():
 	
 	return(ts)
 	#event=np.array(event)
-	#data={'Total1':[0],'File':[0],'File submissions':[0],'System':[0]}
-	
+	#data={'Total1':[0],'File':[0],'File submissions':[0],'System':[0]}	
 
 if __name__=='__main__':
 	app.run(debug=True)
