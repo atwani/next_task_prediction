@@ -12,7 +12,7 @@ from sklearn.datasets import make_regression
 #import tensorflow as tf
 import joblib
 import json
-from flask_caching import Cache
+
 #import jsonify
 app = flask.Flask(__name__)
 model = joblib.load(r'model_linear2.pkl')
@@ -31,13 +31,7 @@ def predict():
 	#event=np.array(event)
 	#data={'Total1':[0],'File':[0],'File submissions':[0],'System':[0]}
 	
-config = {
-    "DEBUG": True,          # some Flask specific configs
-    "CACHE_TYPE": "SimpleCache",  # Flask-Caching related configs
-    "CACHE_DEFAULT_TIMEOUT": 300
-}
 
 if __name__=='__main__':
 	app.run(debug=True)
-	app.config.from_mapping(config)
-	cache = Cache(app)
+	
