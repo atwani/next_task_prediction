@@ -24,7 +24,7 @@ def predict():
 	data1 = data.to_numpy()
 	scaler=StandardScaler()
 	scaler_datax=scaler.fit_transform(data1)
-	prediction=model.predict(data1)
+	prediction=model.predict(scaler_datax)
 	ts=np.array2string(prediction)
 	
 	return(ts)
