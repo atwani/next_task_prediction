@@ -9,4 +9,4 @@ scikit-learn>=1.2.1
 matplotlib>=1.4.3
 pandas>=0.19
 joblib==1.1.1
-Flask-Caching==1.8
+
