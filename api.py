@@ -23,7 +23,7 @@ def predict():
 	data1 = data.to_numpy()
 	scaler=StandardScaler()
 	scalerdatax=scaler.fit_transform(data1)
-	prediction=model.predict(scalerdatax)
+	prediction=model.predict(data1)
 	ts=np.array2string(prediction)
 	
 	return(ts)
